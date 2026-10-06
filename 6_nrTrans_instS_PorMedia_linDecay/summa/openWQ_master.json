@@ -1,69 +1,63 @@
 {
-	"PROJECT_NAME": "Synthetic_tests_1",
-	"GEOGRAPHICAL_LOCATION": "NA",
-	"AUTHORS": "Diogo Costa",
-	"DATE": "Aug_2022",
-	"COMMENT": "1_conserv_instant_SW",
-	"COMPUTATIONAL_SETTINGS": {
-		"RUN_MODE_DEBUG": true,
-		"USE_NUM_THREADS": "all" // "all" or integer of number of threads to use (e.g., 10)
-	},
-	"OPENWQ_INPUT": {
-		"CONFIG_FILEPATH": "openWQ_config_1.json",
-		"EXTERNAL_WATER_FLUXES": {
-			"1": {
-				"LABEL": "Rainfall",
-				"FILEPATH": "openWQ_rainfall_1.json"
-			}
-		}//,
-		//"SINK_SOURCE": {
-		//	"1": {
-		//		"LABEL": "Load_1_test",
-		//		"FILEPATH": "openWQ_source_batchSimulations.json"
-		//	}
-		//}
-	},
-	"MODULES": {
-		"BIOGEOCHEMISTRY": {
-			"MODULE_NAME": "OPENWQ_NATIVE_BGC",
-			"MODULE_CONFIG_FILEPATH": "openWQ_MODULE_BGC_cycling_1.json"
-		},
-		"TRANSPORT_EROSION": {
-			//"MODULE_NAME": "OPENWQ_NATIVE_TE_NO_ADVDISP", // needed for CRHM because it already uses its native transport routined
-			"MODULE_NAME": "OPENWQ_NATIVE_TE_ADVP", // needed for CRHM because it already uses its native transport routined
-			"MODULE_CONFIG_FILEPATH": "openWQ_MODULE_TE_batchSimulations.json"
-		}
-	},
-	"OPENWQ_OUTPUT": {
-		"RESULTS_FOLDERPATH": "Output_OpenWQ",
-		"FORMAT": "HDF5", // HDF5, CSV (VTK has been disabled)
-		"CHEMICAL_SPECIES": ["species_A", "species_B"],
-		"UNITS": "mg/l",
-		"NO_WATER_CONC_FLAG": -9999, // only accepts integers
-		"COMPARTMENTS_AND_CELLS": {
-			//"SCALARCANOPYWAT": {
-			//	"1": [1, 1, 1]
-			//},
-			//"ILAYERVOLFRACWAT_SNOW": {
-			//	"1": [1, 1, 1]
-			//},
-			//"RUNOFF": {
-			//	"1": [1, 1, 1]
-			//},
-			//"RUNOFF": "all",
-			"ILAYERVOLFRACWAT_SOIL": "all"
-			//"ILAYERVOLFRACWAT_SOIL": {
-			//	"1": [1, 1, 1],
-			//	"2": [1, 1, 5],
-			//	"3": [1, 1, 20],
-			//	"4": [1, 1, 30],
-			//	"5": [1, 1, 60],
-			//	"6": [1, 1, 90]
-			//}//,
-			//"SCALARAQUIFER": {
-			//	"1": [1, 1, 1]
-			//}
-		},
-		"TIMESTEP": [1, "day"]
-	}
+    "PROJECT_NAME": "Synthetic_tests_1",
+    "GEOGRAPHICAL_LOCATION": "NA",
+    "AUTHORS": "Diogo Costa",
+    "DATE": "Aug_2022 (migrated to OpenWQ v1.1.0 format, Oct_2026)",
+    "COMMENT": "1_conserv_instant_SW",
+    "COMPUTATIONAL_SETTINGS": {
+        "RUN_MODE_DEBUG": true,
+        "USE_NUM_THREADS": "all"
+    },
+    "SOLVER": "FORWARD_EULER",
+    "OPENWQ_INPUT": {
+        "CONFIG_FILEPATH": "openWQ_config_1.json",
+        "EXTERNAL_WATER_FLUXES": {
+            "1": {
+                "LABEL": "Rainfall",
+                "FILEPATH": "openWQ_rainfall_1.json"
+            }
+        }
+    },
+    "MODULES": {
+        "BIOGEOCHEMISTRY": {
+            "MODULE_NAME": "NATIVE_BGC_FLEX",
+            "MODULE_CONFIG_FILEPATH": "openWQ_MODULE_BGC_cycling_1.json"
+        },
+        "TRANSPORT_DISSOLVED": {
+            "MODULE_NAME": "NATIVE_TD_ADV",
+            "MODULE_CONFIG_FILEPATH": "openWQ_MODULE_TD_batchSimulations.json"
+        },
+        "LATERAL_EXCHANGE": {
+            "MODULE_NAME": "NONE"
+        },
+        "TRANSPORT_SEDIMENTS": {
+            "MODULE_NAME": "NONE"
+        },
+        "SORPTION_ISOTHERM": {
+            "MODULE_NAME": "NONE"
+        }
+    },
+    "OPENWQ_OUTPUT": {
+        "RESULTS_FOLDERPATH": "Output_OpenWQ",
+        "FORMAT": "HDF5",
+        "CHEMICAL_SPECIES": [
+            "species_A",
+            "species_B"
+        ],
+        "UNITS": "mg/l",
+        "NO_WATER_CONC_FLAG": -9999,
+        "COMPARTMENTS_AND_CELLS": {
+            "ILAYERVOLFRACWAT_SOIL": {
+                "1": [
+                    "all",
+                    "all",
+                    "all"
+                ]
+            }
+        },
+        "TIMESTEP": [
+            1,
+            "day"
+        ]
+    }
 }

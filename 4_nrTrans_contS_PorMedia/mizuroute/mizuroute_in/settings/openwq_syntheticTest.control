@@ -16,9 +16,10 @@
 ! --------------------------------------------
 <case_name>         v1.2_case1                                ! simulation case name
 <sim_start>         2017-07-03 12:15:00                       ! time of simulation start (yyyy-mm-dd hh:mm:ss)
-<sim_end>           2019-12-20 13:45:00                       ! time of simulation end (yyyy-mm-dd hh:mm:ss)
+<sim_end>           2019-12-19 12:15:00                       ! time of simulation end (yyyy-mm-dd hh:mm:ss)
 <newFileFrequency>  single                                    ! Diogo
 <route_opt>         5                                         ! option for routing schemes 1->IRF, 2->KWT otherwise error, 3->kinematicWave, 4->muskingumCunge, 5-diffusiveWave
+<hw_drain_point>    1                                         ! headwater runoff poured at the TOP of the reach, as in 2023 (default 2 skips OpenWQ transport for headwater reaches)
 <restart_write>     last                                      ! restart write option. never, last, specified (need to specify date with <restart_date> 
 !<fname_state_in>   v1.2_case2.mizuRoute.r.yyy-mm-hh.sssss.nc ! input netCDF for channel states 
 ! ****************************************************************************************************************************

@@ -1,5 +1,5 @@
 {
-    "MODULE_NAME": "OPENWQ_NATIVE_BGC",
+    "MODULE_NAME": "NATIVE_BGC_FLEX",
     "CHEMICAL_SPECIES": {
         "LIST": {
             "1": "species_A",
@@ -7,7 +7,7 @@
             "3": "time_track",
             "4": "time_pool"
         },
-        "BGC_general_mobile_species": [1,2]
+        "BGC_general_mobile_species": ["species_A", "species_B"]
     },
     "CYCLING_FRAMEWORKS": {
         "bgq_test_9": {

@@ -1,5 +1,5 @@
 {
-    "MODULE_NAME": "OPENWQ_NATIVE_BGC",
+    "MODULE_NAME": "NATIVE_BGC_FLEX",
     "CHEMICAL_SPECIES": {
         "LIST": {
             "1": "BOD",

@@ -8,7 +8,7 @@
                 "Data_Format": "JSON",
                 "Data":{
                     "species_A": {
-                        "1": ["all","all","all",10,"mg/l"]
+                        "1": ["all","all","all",0,"mg/l"]
                     },
                     "species_B": {
                         "1": ["all","all","all",0,"mg/l"]

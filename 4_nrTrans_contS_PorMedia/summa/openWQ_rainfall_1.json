@@ -1,20 +1,20 @@
 {
-	"METADATA": {
-		"Comment": "Rainfall concentration data",
-		"Source": "test_1"
-	},
-	"1": {
-		"Chemical_name": "species_A",
-		"External_InputFlux_name": "PRECIP",
-		"Units": "mg/l",
-		"Data_Format": "JSON",
-		"Data": {
-			// YYYY,MM,DD,HH,MIN,SEC, ix,iy,iz,load
-			"1": [2017,9,"all","all","all","all","all","all",1,2]
-			//"2": [2018,"all",4,6,30,"all",1,1,10,"discrete"],
-			//"3": [2017,11,20,6,30,"all",1,1,10,"discrete"],
-			//"4": [2018,"all","all",10,30,"all",1,1,20,"discrete"],
-			//"5": [2018,9,27,4,30,1,1,1,20000,"discrete"]
-		}
-	}
+    "METADATA": {"Comment": "Rainfall concentration data", "Source": "test_1"},
+    "1": {
+        "Chemical_name": "species_A",
+        "External_InputFlux_name": "PRECIP",
+        "Units": "mg/l",
+        "Data_Format": "JSON",
+        "Data": {
+            // YYYY, MM, DD, HH, MIN, SEC, ix, iy, iz, load
+            // ix/iy/iz = "all": the SUMMA PRECIP flux has a single element (1 HRU x 1 x 1);
+            // OpenWQ v1.1.0 reads numeric ix/iy/iz as host-model cell IDs, not indices
+            "1": [2017, 9, "all", "all", "all", "all", "all", "all", "all", 2],
+            "2": [2017, 10, "all", "all", "all", "all", "all", "all", "all", 2],
+            "3": [2017, 11, "all", "all", "all", "all", "all", "all", "all", 2],
+            "4": [2017, 12, "all", "all", "all", "all", "all", "all", "all", 2],
+            "5": [2018, "all", "all", "all", "all", "all", "all", "all", "all", 2],
+            "6": [2019, "all", "all", "all", "all", "all", "all", "all", "all", 2]
+        }
+    }
 }

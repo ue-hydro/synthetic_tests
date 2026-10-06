@@ -1,11 +1,11 @@
 {
-    "MODULE_NAME": "OPENWQ_NATIVE_BGC",
+    "MODULE_NAME": "NATIVE_BGC_FLEX",
     "CHEMICAL_SPECIES": {
         "LIST": {
             "1": "species_A",
             "2": "species_B"
         },
-        "BGC_GENERAL_MOBILE_SPECIES": [1, 2]
+        "BGC_GENERAL_MOBILE_SPECIES": ["species_A", "species_B"]
     },
     "CYCLING_FRAMEWORKS": {
         "BGQcycle_1": {

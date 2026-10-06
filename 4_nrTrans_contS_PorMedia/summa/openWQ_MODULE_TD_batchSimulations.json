@@ -1,0 +1,9 @@
+{
+    "MODULE_NAME": "NATIVE_TD_ADV",
+    "TRANSPORT_CONFIGURATION": {
+        "dispersion_x_m2/s": 0.3,
+        "dispersion_y_m2/s": 0.3,
+        "dispersion_z_m2/s": 0.3,
+        "characteristic_length_m": 100.0
+    }
+}
