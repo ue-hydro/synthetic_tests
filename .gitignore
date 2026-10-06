@@ -1,1 +1,8 @@
 */summa/summa/output/*.*
+# OS / editor
+.DS_Store
+*.asv
+# run outputs
+*/summa/Output_OpenWQ/
+*/mizuroute/Output_OpenWQ/
+*/mizuroute/mizuroute_out/

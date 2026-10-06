@@ -1,0 +1,15 @@
+{
+  "title": "Configuration files and scripts for the OpenWQ functional unit tests",
+  "upload_type": "dataset",
+  "description": "<p>Configuration files, host-model inputs, and analytical-solution scripts for the functional unit tests of OpenWQ coupled to SUMMA and mizuRoute: batch reaction networks (Tests 1-6) and advection-dispersion with and without first-order decay in a SUMMA soil column and a mizuRoute river network (Tests 7-10). These are the test cases reported in Costa et al. (submitted to the Journal of Advances in Modeling Earth Systems), Appendix C.</p><p>Requires OpenWQ v1.1.1 or later (doi:10.5281/zenodo.23183928), SUMMA (ue-hydro/summa_ashleymedin, develop) and mizuRoute (ue-hydro/mizuRoute_ESCOMP_withOpenWQlink, main, commit a181364 or later). See README.md for build and run instructions and expected results.</p>",
+  "creators": [
+    {"name": "Costa, Diogo", "affiliation": "Universidade de Évora", "orcid": "0000-0002-8841-2522"}
+  ],
+  "license": "CC-BY-4.0",
+  "keywords": ["water quality", "biogeochemistry", "analytical solutions", "model verification", "unit tests", "reactive transport", "SUMMA", "mizuRoute", "OpenWQ"],
+  "related_identifiers": [
+    {"identifier": "10.5281/zenodo.23183928", "relation": "isSupplementTo", "resource_type": "software", "scheme": "doi"},
+    {"identifier": "https://github.com/ue-hydro/synthetic_tests", "relation": "isSupplementTo", "resource_type": "dataset"}
+  ],
+  "language": "eng"
+}
